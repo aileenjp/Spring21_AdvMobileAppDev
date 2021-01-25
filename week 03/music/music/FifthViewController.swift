@@ -70,7 +70,7 @@ class FifthViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         //the shared audio session instance
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            //sets he category for recording and playback of audio
+            //sets the category for recording and playback of audio
             try audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: .init(rawValue: 1))
         } catch {
             print("audio session error: \(error.localizedDescription)")

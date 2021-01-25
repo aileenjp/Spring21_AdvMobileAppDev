@@ -20,7 +20,7 @@ class DataLoader {
                 allData = try plistdecoder.decode([ArtistAlbums].self, from: data)
             } catch {
                 //handle error
-                print(error)
+                print("Cannot load data")
             }
         }
     }
