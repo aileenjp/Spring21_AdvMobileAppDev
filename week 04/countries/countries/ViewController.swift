@@ -46,6 +46,14 @@ class ViewController: UITableViewController {
                     detailVC.selectedContinent = indexPath.row
                 }
             }
+        } //for detail disclosure
+        else if segue.identifier == "continentsegue"{
+            let infoVC = segue.destination as! ContinentInfoTableViewController
+            let editingCell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: editingCell)
+            infoVC.name = continentList[indexPath!.row]
+            let countryList = continentsData.getCountries(index: (indexPath?.row)!)
+            infoVC.number = String(countryList.count)
         }
     }
 

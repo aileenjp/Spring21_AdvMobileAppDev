@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7512031725CE18D800033BA4 /* ContinentInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512031625CE18D800033BA4 /* ContinentInfoTableViewController.swift */; };
 		75D071E325C9F0AF00717CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D071E225C9F0AF00717CA5 /* AppDelegate.swift */; };
 		75D071E525C9F0AF00717CA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D071E425C9F0AF00717CA5 /* SceneDelegate.swift */; };
 		75D071E725C9F0AF00717CA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D071E625C9F0AF00717CA5 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7512031625CE18D800033BA4 /* ContinentInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentInfoTableViewController.swift; sourceTree = "<group>"; };
 		75D071DF25C9F0AF00717CA5 /* countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D071E225C9F0AF00717CA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D071E425C9F0AF00717CA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				75D0720025CA152700717CA5 /* DetailViewController.swift */,
 				75D0720325CAF76000717CA5 /* AddCountryViewController.swift */,
 				75D071E825C9F0AF00717CA5 /* Main.storyboard */,
+				7512031625CE18D800033BA4 /* ContinentInfoTableViewController.swift */,
 				75D071EB25C9F0B100717CA5 /* Assets.xcassets */,
 				75D071ED25C9F0B100717CA5 /* LaunchScreen.storyboard */,
 				75D071F025C9F0B100717CA5 /* Info.plist */,
@@ -159,6 +162,7 @@
 				75D071E325C9F0AF00717CA5 /* AppDelegate.swift in Sources */,
 				75D0720125CA152700717CA5 /* DetailViewController.swift in Sources */,
 				75D071FB25C9F62600717CA5 /* ContinentsData.swift in Sources */,
+				7512031725CE18D800033BA4 /* ContinentInfoTableViewController.swift in Sources */,
 				75D071E525C9F0AF00717CA5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
