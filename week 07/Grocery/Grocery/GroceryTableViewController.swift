@@ -11,7 +11,7 @@ class GroceryTableViewController: UITableViewController {
     
     var groceries = [String]()
     var groceryData = GroceryDataHandler()
-    let dataFile = "test.plist"
+    let dataFile = "grocery.plist"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,10 @@ class GroceryTableViewController: UITableViewController {
         groceryData.loadData(fileName: dataFile)
         groceries = groceryData.getGroceryItems()
         
+        //application instance
+        let app = UIApplication.shared
         //subscribe to the UIApplicationWillResignActiveNotification notification
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
     }
 
     //called when the UIApplicationWillResignActiveNotification notification is posted

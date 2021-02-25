@@ -17,6 +17,7 @@ class GroceryDataHandler{
         //append the file name to the first item in the array which is the document directory
         url = urls.first?.appendingPathComponent(filename)
         //return the URL of the data file or nil if it does not exist
+        print("data file url \(url)")
         return url
     }
 
@@ -38,26 +39,23 @@ class GroceryDataHandler{
                 }
         }
         else {
-            print("file does not exist")
+            print("loading data - file does not exist")
         }
     }
     
     func saveData(fileName: String){
         //url of data file
         let fileURL = dataFileURL(fileName)
-        //if the data file exists, use it
-        if FileManager.default.fileExists(atPath: (fileURL?.path)!){
-            do {
-                //create an instance of PropertyListEncoder
-                let encoder = PropertyListEncoder()
-                //set format type to xml
-                encoder.outputFormat = .xml
-                let encodedData = try encoder.encode(groceryData)
-                //write encoded data to the file
-                try encodedData.write(to: fileURL!)
-            } catch {
-                print("write error")
-            }
+        do {
+            //create an instance of PropertyListEncoder
+            let encoder = PropertyListEncoder()
+            //set format type to xml
+            encoder.outputFormat = .xml
+            let encodedData = try encoder.encode(groceryData)
+            //write encoded data to the file
+            try encodedData.write(to: fileURL!)
+        } catch {
+            print("write error")
         }
     }
     
