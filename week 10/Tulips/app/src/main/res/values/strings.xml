@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tulips</string>
+    <string name="bulbs">Bulbs</string>
+    <string name="bulb_image">Bulb picture</string>
+</resources>
