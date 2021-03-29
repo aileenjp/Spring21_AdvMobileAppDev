@@ -1,0 +1,40 @@
+{
+	"characters":[
+  		{
+    		"name":"Harry Potter",
+    		"picture":"HarryPotter.jpg",
+   			"bio":"",
+    		"info":"https://en.wikipedia.org/wiki/Harry_Potter_(character)"
+  		},
+  		{
+		    "name":"Ron Weasley",
+		    "picture":"Ron_Weasley.jpg",
+		    "bio":"",
+		    "info":"https://en.wikipedia.org/wiki/Ron_Weasley"
+		},
+		{
+		    "name":"Hermione Granger",
+		    "picture":"Hermione_Granger.jpg",
+		    "bio":"",
+		    "info":"https://en.wikipedia.org/wiki/Hermione_Granger"
+		},
+		{
+			"name":"Hagrid",
+		    "picture":"Hagrid.jpg",
+		    "bio":"",
+		    "info":"https://en.wikipedia.org/wiki/Rubeus_Hagrid"
+		},
+		{
+		    "name":"Albus Dumbledore",
+		    "picture":"Albus_Dumbledore2.jpg",
+		    "bio":"",
+		    "info":"https://en.wikipedia.org/wiki/Albus_Dumbledore"
+		},
+		{
+		    "name":"Severus Snape",
+		    "picture":"Severus_Snape.jpg",
+		    "bio":"",
+		    "info":"https://en.wikipedia.org/wiki/Severus_Snape"
+		}
+	]
+}
