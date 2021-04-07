@@ -7,21 +7,15 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.movies.model.Movie
+import com.example.movies.model.MovieViewModel
 import org.json.JSONException
 import org.json.JSONObject
 
 class JSONData {
-    val dataList = ArrayList<Movie>()
     val api_url = "https://api.themoviedb.org/3/movie/top_rated?api_key="
     val api_key = "9bc41deb95194da5e8865be1fe7750a4"
 
-    fun getJSON(context: Context): ArrayList<Movie>{
-
-        var json = loadJSON(context)
-        return dataList
-    }
-
-    fun loadJSON(context: Context) {
+    fun loadJSON(context: Context, movieViewModel: MovieViewModel) {
         val url = api_url + api_key
 
         // instantiate the Volley request queue
@@ -30,18 +24,19 @@ class JSONData {
         // Request a string response from the provided URL.
         val stringRequest = StringRequest(
             Request.Method.GET, url,
-            Response.Listener<String> { response ->
-                parseJSON(response)
-            },
-            Response.ErrorListener {
-                Log.e("ERROR", error("request failed"))
-            })
+                { response ->
+                    parseJSON(response, movieViewModel)
+                },
+                {
+                    Log.e("ERROR", error("request failed"))
+                })
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest)
     }
 
-    fun parseJSON(response: String){
+    fun parseJSON(response: String, movieViewModel: MovieViewModel){
+        val dataList = ArrayList<Movie>()
         // Base url for the posters
         val poster_base_url = "https://image.tmdb.org/t/p/w185"
 
@@ -72,6 +67,7 @@ class JSONData {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
+        movieViewModel.movieList.value = dataList
         Log.i("json data list value", dataList.size.toString())
     }
 }

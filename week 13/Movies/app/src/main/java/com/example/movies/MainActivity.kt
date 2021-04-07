@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.movies.util.JSONData
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         //only load the JSON data once per app lifetime
         if (viewModel.movieList.value == null){
-            viewModel.loadData(this)
+            val loader = JSONData()
+            loader.loadJSON(this, viewModel)
             Log.i("main", "in if to load data")
         }
 
